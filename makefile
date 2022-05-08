@@ -5,7 +5,7 @@ SOURCES=src/main.cpp src/persegiempat.cpp
 src/%.o: src/%.cpp 
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
 
-sim: $(SOURCES:.cpp=.o)
+persegipanjang: $(SOURCES:.cpp=.o)
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
 clean: 
