@@ -1,8 +1,9 @@
 #include <iostream>
 #include"include/persegiempat.hpp"
 
-persegipanjang::persegipanjang(float tengahx,float tengahy, float panjang, float lebar)
+persegipanjang::persegipanjang(float tengahx,float tengahy, float panjang, float lebar) //Deklarasi constructor dari kelas persegipanjang
 {
+    //mengubah titiktengah, panjang, lebar menjadi xmin,xmax,ymin,ymax
     this->tengahxasli = tengahx;
     this->tengahyasli = tengahy;
     this->panjangasli = panjang;
@@ -11,12 +12,14 @@ persegipanjang::persegipanjang(float tengahx,float tengahy, float panjang, float
     this->xmax = tengahx + (panjang*0.5);
     this->ymin = tengahy - (lebar*0.5);
     this->ymax = tengahy + (lebar*0.5);
+} 
+
+persegipanjang::persegipanjang() //Deklarasi persegipanjang kosong untuk main.cpp
+{
 }
 
-persegipanjang::persegipanjang(){
-}
-
-bool persegipanjang::operator==(persegipanjang anjay){
+bool persegipanjang::operator==(persegipanjang anjay)//Oveloading operator ==
+{
     if ((this->xmin < anjay.xmax) && (anjay.xmin<this->xmax) && (this->ymin < anjay.ymax) && (anjay.ymin<this->ymax)){
         return true;
     } else {
@@ -24,7 +27,8 @@ bool persegipanjang::operator==(persegipanjang anjay){
     }
 }
 
-persegipanjang persegipanjang::operator+(persegipanjang anjay){
+persegipanjang persegipanjang::operator+(persegipanjang anjay)//Overloading operator +
+{
     persegipanjang baru(0,0,0,0);
     if (*this == anjay){
         if(this->xmin<anjay.xmin){
@@ -43,7 +47,8 @@ persegipanjang persegipanjang::operator+(persegipanjang anjay){
     return baru;
 }
 
-persegipanjang persegipanjang::operator-(persegipanjang anjay){
+persegipanjang persegipanjang::operator-(persegipanjang anjay)//Overloading operator -
+{
     persegipanjang baru(0,0,0,0);
     if (*this == anjay){
         if(this->xmin<anjay.xmin){
@@ -62,7 +67,8 @@ persegipanjang persegipanjang::operator-(persegipanjang anjay){
     return baru;
 }
 
-void persegipanjang::printhasil(){
+void persegipanjang::printhasil()//Melakukan output dari attribute Persegipanjang
+{
     std::cout<<"Titik tengah x persegi : "<<this->tengahxasli<<std::endl;
     std::cout<<"Titik tengah y persegi : "<<this->tengahyasli<<std::endl;
     std::cout<<"Panjang persegi : "<<this->panjangasli<<std::endl;
@@ -74,7 +80,8 @@ void persegipanjang::printhasil(){
     std::cout<<"\n\n";
 }
 
-void persegipanjang::operator++(){
+void persegipanjang::operator++()//Overloading operator ++
+{
     float panjang,lebar,tengahx,tengahy;
     panjang = this->xmax - this->xmin;
     lebar = this->ymax - this->ymin;
@@ -91,7 +98,8 @@ void persegipanjang::operator++(){
     this->ymax = tengahy+(lebar/2);
 }
 
-void persegipanjang::operator--(){
+void persegipanjang::operator--()//Overloading operator --
+{
     float panjang,lebar,tengahx,tengahy;
     panjang = this->xmax - this->xmin;
     lebar = this->ymax - this->ymin;
@@ -108,7 +116,8 @@ void persegipanjang::operator--(){
     this->ymax = tengahy+(lebar/2);
 }
 
-float persegipanjang::operator[](int i){
+float persegipanjang::operator[](int i)//Overloading operator []
+{
     switch (i)
     {
     case 1:
