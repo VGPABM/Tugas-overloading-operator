@@ -3,18 +3,18 @@
 
 #include <iostream>
 
-class persegiempat {
+class persegipanjang {
     private:
     float xmin,xmax,ymin,ymax,tengahxasli,tengahyasli,panjangasli,lebarasli;
 
     public:
-    persegiempat();
-    persegiempat(float tengahx,float tengahy, float panjang, float lebar);
+    persegipanjang();
+    persegipanjang(float tengahx,float tengahy, float panjang, float lebar);
     
     void printhasil();
-    bool operator==(persegiempat);
-    persegiempat operator+(persegiempat);
-    persegiempat operator-(persegiempat);
+    bool operator==(persegipanjang);
+    persegipanjang operator+(persegipanjang);
+    persegipanjang operator-(persegipanjang);
     void operator++();
     void operator--();
     float operator[](int i);
