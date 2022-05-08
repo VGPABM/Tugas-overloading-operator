@@ -1,4 +1,6 @@
 # Tugas-overloading-operator
+Milik Vincentius Gusti Putu Agung Bagus Mahendra <br>
+NRP: 5024211071<br><br><br>
 Cara menjalankan program :<br>
 
 1.lakukan git clone (link repository ini).<br>
