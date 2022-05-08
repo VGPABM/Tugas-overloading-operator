@@ -8,13 +8,13 @@
 
 using namespace std;
 
-void operation(persegiempat p1,persegiempat p2){
+void operation(persegipanjang p1,persegipanjang p2){
     system("@cls || clear");
     cout<<"Info tentang persegi pertama"<<endl;
     p1.printhasil();
     cout<<"Info tentang persegi kedua"<<endl;
     p2.printhasil();
-    persegiempat p3;
+    persegipanjang p3;
     p3=p1 + p2;
     if(p1==p2){
         cout<<"Hasil operasi penambahan kedua persegi "<<endl;
@@ -61,7 +61,7 @@ int main(){
     cout<<"Masukkan  lebar :"; cin>>lebar;
     cout<<"Masukkan  titik tengah x :"; cin>>tengahx;
     cout<<"Masukkan  titik tengah y :"; cin>>tengahy;
-    persegiempat p1(tengahx,tengahy,panjang,lebar);
+    persegipanjang p1(tengahx,tengahy,panjang,lebar);
 
     system("@cls || clear");
     panjang = 0; lebar = 0; tengahx = 0; tengahy = 0;
@@ -71,7 +71,7 @@ int main(){
     cout<<"Masukkan  titik tengah x :"; cin>>tengahx;
     cout<<"Masukkan  titik tengah y :"; cin>>tengahy;
     cout<<endl;cout<<endl;cout<<endl;
-    persegiempat p2(tengahx,tengahy,panjang,lebar);
+    persegipanjang p2(tengahx,tengahy,panjang,lebar);
 
     cout<<"Press enter to continue...";
     cin.ignore();
