@@ -3,10 +3,11 @@
 
 #include <iostream>
 
-class persegipanjang {
+class persegipanjang{
     private:
     float xmin,xmax,ymin,ymax,tengahxasli,tengahyasli,panjangasli,lebarasli;
-
+    //attribute persegipanjang
+    
     public:
     persegipanjang();
     persegipanjang(float tengahx,float tengahy, float panjang, float lebar);
@@ -18,6 +19,8 @@ class persegipanjang {
     void operator++();
     void operator--();
     float operator[](int i);
-};
+    //fungsi-fungsi dari kelas persegipanjang
+    
+}; //deklarasi kelas persegipanjang
 
 #endif
