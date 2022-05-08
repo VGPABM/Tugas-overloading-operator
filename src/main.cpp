@@ -8,7 +8,9 @@
 
 using namespace std;
 
-void operation(persegipanjang p1,persegipanjang p2){
+void operation(persegipanjang p1,persegipanjang p2) //Melakukan demo operator + dan -, masuk ke dalam fungsi ini apabila persegi memenuhi operator ==
+{
+	//Contoh operasi +
     system("@cls || clear");
     cout<<"Info tentang persegi pertama"<<endl;
     p1.printhasil();
@@ -25,6 +27,7 @@ void operation(persegipanjang p1,persegipanjang p2){
     cout<<"Press enter to continue...";
     cin.ignore();cin.ignore();
 
+	//contoh operasi -
     system("@cls || clear");
     cout<<"Info tentang persegi pertama"<<endl;
     p1.printhasil();
@@ -53,7 +56,8 @@ int main(){
     cout<<"Tekan enter untuk menggunakan aplikasi"<<endl;
 	cin.ignore();
 	cin.ignore();
-
+	
+	//Input persegi panjang pertama
     system("@cls || clear");
     float panjang = 0, lebar = 0, tengahx = 0, tengahy = 0;
     cout<<"Memasukkan persegiempat pertama \n";
@@ -62,7 +66,8 @@ int main(){
     cout<<"Masukkan  titik tengah x :"; cin>>tengahx;
     cout<<"Masukkan  titik tengah y :"; cin>>tengahy;
     persegipanjang p1(tengahx,tengahy,panjang,lebar);
-
+	
+	//Input persegi panjang kedua
     system("@cls || clear");
     panjang = 0; lebar = 0; tengahx = 0; tengahy = 0;
     cout<<"Masukkan persegiempat kedua : \n";
@@ -75,7 +80,8 @@ int main(){
 
     cout<<"Press enter to continue...";
     cin.ignore();
-
+	
+	//Contoh penggunaan operator == (mengecek apakah kedua persegi panjang beririsan
     system("@cls|| clear");
     cout<<"Info tentang persegi pertama"<<endl;
     p1.printhasil();
@@ -88,8 +94,9 @@ int main(){
     cout<<"Press enter to continue...";
     cin.ignore();
 
-    if (p1==p2){operation(p1,p2);}
+    if (p1==p2){operation(p1,p2);} //masuk ke dalam fungsi diatas (operator + dan -)
     
+	//Contoh penggunaan operator ++
     system("@cls || clear");
     cout<<"Info tentang persegi pertama"<<endl;
     p1.printhasil();
@@ -106,8 +113,8 @@ int main(){
     cout<<endl;cout<<endl;cout<<endl;
     cout<<"Press enter to continue...";
     cin.ignore();
-
-
+	
+	//Contoh penggunaan operator --
     system("@cls || clear");
     cout<<"Info tentang persegi pertama"<<endl;
     p1.printhasil();
@@ -124,7 +131,8 @@ int main(){
     cout<<endl;cout<<endl;cout<<endl;
     cout<<"Press enter to continue...";
     cin.ignore();
-
+	
+	//Contoh penggunaan operator [] untuk membandingkan mana titik (x/y) min yang paling kiri atau bawah dan (x/y) max yang paling kanan atau atas
     system("@cls || clear");
     cout<<"Membandingkan xmin dari persegi "<<endl;
     cout<<"X paling kiri dari persegi pertama adalah "<<p1[1]<<" sementara persegi kedua adalah "<<p2[1]<<endl;
